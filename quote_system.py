@@ -17,11 +17,11 @@ def ask_file_name(user_input):
 def read_file(file_name):
     try:
         with open(file_name):
-            print(f"File successfully opened...\n")
-            return
-    except:
-        return ""
-
+            print("File successfully opened...\n")
+            return file_name
+    except FileNotFoundError:
+        print("FileNotFoundError successfully handled")
+        print(f"[Errno 2] No such file or directory: '{file_name}'")
 
 # TODO: Step 3 - randomly select quotee from `Quotees` list and return a random quotee. 
 def select_random_quotee(Quotees):
