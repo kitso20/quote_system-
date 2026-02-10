@@ -1,4 +1,5 @@
 import random
+import os
 
 Quotees = ["Abdullah Ibrahim","Miriam Makeba", "Nelson Mandela", "Eleanor Roosevelt",
  "Anne Frank", "Alexander Graham Bell","Thomas Edison","Estee Lauder","Maya Angelou", "Walt Disney"]
@@ -8,20 +9,23 @@ Quotees = ["Abdullah Ibrahim","Miriam Makeba", "Nelson Mandela", "Eleanor Roosev
 #                Use `quotes.txt` for blank user input.
 def ask_file_name(user_input):
     if user_input:
-        quotes_file = ""
-    return ""
+        return user_input
+    return "quotes.txt"
     
     
 # TODO: Step 2 - Correct the functionality in the function below to successfully open file
 #                and to sucessfully handle the FileNotFoundError. 
 def read_file(file_name):
     try:
+        file_name  = 'quotes.txt'
         with open(file_name):
             print("File successfully opened...\n")
             return file_name
     except FileNotFoundError:
         print("FileNotFoundError successfully handled")
         print(f"[Errno 2] No such file or directory: '{file_name}'")
+    
+
 
 # TODO: Step 3 - randomly select quotee from `Quotees` list and return a random quotee. 
 def select_random_quotee(Quotees):
@@ -44,7 +48,7 @@ def final_output(quote,quotee):
     string = str(quote).split("~")
     print("Quote found in file:")
     print(f"'{string[0].strip()}'" + ': '+ string[1].strip())
- 
+
  
 if __name__ == "__main__":
     """
