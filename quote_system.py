@@ -41,9 +41,9 @@ def find_quote(random_quotee,quotes):
 
 # TODO: Step 5 - Correctly print out the final results to pass the unitests.
 def final_output(quote,quotee):
-    str(quote).split("~")
+    string = str(quote).split("~")
     print("Quote found in file:")
-    print(quotee + ': '+ quote[1].strip())
+    print(f"'{string[0].strip()}'" + ': '+ string[1].strip())
  
  
 if __name__ == "__main__":
