@@ -34,9 +34,9 @@ def select_random_quotee(Quotees):
 #                "Quote/quotee does not exist." must be returned for quote that doesn't exist.
 def find_quote(random_quotee,quotes):
     for quote in quotes:
-        if quote:
-            return ""
-    return ""
+        if random_quotee in quote:
+            return quote
+    return "Quote/quotee does not exist."
 
 
 # TODO: Step 5 - Correctly print out the final results to pass the unitests.
