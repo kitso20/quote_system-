@@ -25,8 +25,8 @@ def read_file(file_name):
 
 # TODO: Step 3 - randomly select quotee from `Quotees` list and return a random quotee. 
 def select_random_quotee(Quotees):
-    random_quotee = ""
-    return ""
+    random_quotee = random.choice(Quotees)
+    return random_quotee
 
 
 # TODO: Step 4 - correct the functionality in the function below to 
