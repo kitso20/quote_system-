@@ -17,7 +17,7 @@ def ask_file_name(user_input):
 #                and to sucessfully handle the FileNotFoundError. 
 def read_file(file_name):
     try:
-        file_name  = 'quotes.txt'
+        # file_name  = 'quotes.txt'
         with open(file_name):
             print("File successfully opened...\n")
             return file_name
